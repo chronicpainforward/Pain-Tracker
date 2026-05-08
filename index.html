@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>React App</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-CvvisZgL.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Bl2naWXH.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Pain Forward - Living Well with Chronic Pain</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="description" content="Daily living tracker for chronic pain management">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f0e8; }
+        
+        nav { background: #ede7dc; border-bottom: 1px solid #d4cfc4; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-size: 18px; font-weight: 500; color: #534AB7; text-decoration: none; }
+        nav .links { display: flex; gap: 8px; }
+        nav a { padding: 8px 16px; font-size: 14px; color: #6b5d4f; text-decoration: none; border-radius: 8px; }
+        nav a.active { background: #534AB7; color: #fff; font-weight: 500; }
+        
+        .hero { text-align: center; padding: 48px 24px; background: #f5f0e8; }
+        .hero h1 { font-size: 40px; font-weight: 500; color: #3d2f23; margin-bottom: 16px; }
+        .hero p { font-size: 18px; color: #6b5d4f; max-width: 600px; margin: 0 auto 24px; line-height: 1.6; }
+        .hero .cta { display: inline-block; padding: 14px 32px; background: #1D9E75; color: #fff; border-radius: 10px; font-size: 16px; font-weight: 500; text-decoration: none; box-shadow: 0 4px 12px rgba(29, 158, 117, 0.25); }
+        
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; padding: 32px 24px; max-width: 1200px; margin: 0 auto; }
+        .card { background: #fff; border: 2px solid; border-radius: 12px; padding: 24px; }
+        .card.coral { border-color: #F0997B; }
+        .card.purple { border-color: #AFA9EC; }
+        .card.blue { border-color: #85B7EB; }
+        .card.teal { border-color: #5DCAA5; }
+        .card .icon { width: 52px; height: 52px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+        .card.coral .icon { background: #D85A30; }
+        .card.purple .icon { background: #534AB7; }
+        .card.blue .icon { background: #185FA5; }
+        .card.teal .icon { background: #1D9E75; }
+        .card .icon-inner { width: 24px; height: 24px; background: #fff; border-radius: 4px; }
+        .card h3 { font-size: 17px; font-weight: 500; color: #111827; margin-bottom: 8px; }
+        .card p { font-size: 14px; color: #6b7280; line-height: 1.6; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            nav { flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">ChronicPainForward</a>
+        <div class="links">
+            <a href="/" class="active">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/tracker.html">Tracker</a>
+            <a href="/resources.html">Resources</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Living Well with Chronic Pain</h1>
+        <p>A comprehensive daily tracker designed by healthcare professionals to help you manage chronic pain and communicate effectively with your care team.</p>
+        <a href="/tracker.html" class="cta">Start Tracking Today</a>
+    </div>
+
+    <div class="features">
+        <div class="card coral">
+            <div class="icon"><div class="icon-inner"></div></div>
+            <h3>Daily Pain Tracking</h3>
+            <p>Log pain levels, locations, triggers, and interventions with our detailed body map system.</p>
+        </div>
+        <div class="card purple">
+            <div class="icon"><div class="icon-inner"></div></div>
+            <h3>Trend Analysis</h3>
+            <p>Visualize patterns over time with charts and identify correlations between activities and pain.</p>
+        </div>
+        <div class="card blue">
+            <div class="icon"><div class="icon-inner"></div></div>
+            <h3>Doctor Reports</h3>
+            <p>Generate comprehensive reports for medical appointments with all your data in one place.</p>
+        </div>
+        <div class="card teal">
+            <div class="icon"><div class="icon-inner"></div></div>
+            <h3>Tax Documentation</h3>
+            <p>Track medical expenses and travel for CRA claims with automatic calculations.</p>
+        </div>
+    </div>
+</body>
 </html>
